@@ -1,0 +1,56 @@
+.aboutSection {
+  background:rgb(25, 5, 40);
+  color: #e0dfe7;
+  padding: 4rem 1rem;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  max-width: 850px;
+  padding: 0 20px;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #bb86fc;
+  margin-bottom: 2rem;
+  letter-spacing: 1.5px;
+}
+
+.aboutText {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.6rem;
+  color: #d6d3e0;
+  transition: color 0.3s ease;
+}
+
+.aboutText:last-child {
+  margin-bottom: 0;
+}
+
+.aboutText:hover {
+  color: #bb86fc;
+  cursor: default;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 3rem 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .aboutText {
+    font-size: 1rem;
+  }
+}

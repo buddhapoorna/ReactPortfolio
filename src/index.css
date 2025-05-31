@@ -1,0 +1,115 @@
+Global Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Arial', sans-serif;
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background:  rgb(33, 8, 55);
+  padding: 2rem 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background:  rgb(114, 114, 227);
+  border-radius: 5px;
+}
+
+/* Responsive Typography */
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+p, li {
+  font-size: 1rem;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  margin: auto;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 0.8rem 1.5rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+/* Responsive Breakpoints */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section {
+    padding: 3rem 1rem;
+  }
+}

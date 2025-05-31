@@ -1,0 +1,101 @@
+/* Navbar wrapper: sticks to top and spans full width */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(33, 8, 55);
+  color: white;
+  padding: 0.75rem 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Inner container centers content and adds spacing */
+.navbar-container {
+  max-width: 1280px; /* Fits big screens like 1080p/1440p/4K */
+  padding: 0 2rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo styling */
+.logo {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+/* Horizontal nav links on desktop */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+nav ul li a:hover {
+    
+    font-size: 1.05rem;
+}
+.nav-links li a:hover {
+  color: #00bcd4;
+background-color: rgb(33, 8, 55) ;
+}
+
+/* Hamburger menu (hidden on desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    background-color:rgb(33, 8, 55);
+    position: absolute;
+    top: 60px;
+    right: 1rem;
+    padding: 1rem;
+    display: none;
+    border-radius: 8px;
+    width: max-content;
+    min-width: 160px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin-bottom: 1rem;
+  }
+
+  .navbar-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
